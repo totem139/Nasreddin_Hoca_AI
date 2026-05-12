@@ -1,0 +1,15 @@
+Projeyi vscode üzerinden çalıştırılacak ise:
+
+python3 -m venv venv
+source venv/bin/activate
+pip install flask
+pip install openai
+pip install requests
+pip install python-dotenv
+python3 nasreddin_hoca_ai.py
+
+
+Bunları programı çalıştırmadan önce terminale sırasıyla yazmanız gerekiyor.
+
+Ve ana klasörün içine chatgpt den alınan API key’in .env dosyası içine yazılması gerekiyor.
+
