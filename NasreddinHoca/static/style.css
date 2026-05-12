@@ -1,0 +1,218 @@
+/* --- BODY & GENEL --- */
+body {
+    background-color: #f7f7f7;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.6s ease;
+}
+
+/* --- CHAT CONTAINER --- */
+.chat-container {
+    width: 410px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- HEADER --- */
+h2 {
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    box-shadow: 0 0 8px rgba(0,150,255,0.4);
+}
+
+/* --- CHAT BOX --- */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 400px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.08); /* hafif saydam */
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- MESAJLAR --- */
+.message {
+    max-width: 80%;
+    margin: 8px 0;
+    padding: 10px 14px;
+    border-radius: 14px;
+    line-height: 1.4;
+    font-size: 16px;
+    word-wrap: break-word;
+    backdrop-filter: blur(8px);
+}
+
+.user {
+    align-self: flex-end;
+    background: rgba(0, 102, 204, 0.9); /* opak mavi */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px rgba(0, 150, 255, 0.4);
+}
+
+.bot {
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.85); /* hafif saydam beyaz */
+    color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* --- INPUT AREA --- */
+.input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* --- MOD BUTONLARI --- */
+#modeButtons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #4b8bbe;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(0, 150, 255, 0.4);
+}
+
+#modeButtons button:hover {
+  background: #3671a5;
+}
+
+#toggleMusic {
+  background: #8b4bbe;
+}
+
+#toggleMusic:hover {
+  background: #6f37a3;
+}
+
+/* --- MODA GÖRE BODY RENGİ --- */
+body.mode-normal {
+    background-color: #001F3F; /* Koyu mavi */
+    color: #fff;
+}
+
+body.mode-kuran {
+    background-color: #556B2F; /* Haki yeşil */
+    color: #fff;
+}
+
+/* --- HOCA HEADER --- */
+#hoca-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#hoca-header img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/* --- MUSIC SLIDER --- */
+/* --- MUSIC CONTROL MODERN --- */
+#musicControl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.9); /* daha opak ve parlak */
+    border-radius: 12px;
+    margin: 5px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* hafif gölge */
+}
+
+#musicControl label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Slider Track */
+#musicVolume {
+    width: 180px;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #4b8bbe, #8b4bbe);
+    outline: none;
+    vertical-align: middle;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+/* Slider Track Hover */
+#musicVolume:hover {
+    background: linear-gradient(90deg, #3671a5, #6f37a3);
+}
+
+/* Slider Thumb */
+#musicVolume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffcc00;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#musicVolume::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Firefox */
+#musicVolume::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffcc00;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#musicVolume::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}

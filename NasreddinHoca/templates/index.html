@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasreddin Hoca AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h2>🧠 Nasreddin Hoca AI</h2>
+
+        <!-- 👇 Mod butonları -->
+        <div id="modeButtons">
+            <button id="mod1">Normal Hoca</button>
+            <button id="mod2">Kur'an Hoca</button>
+            <button id="toggleMusic">🔊 Müzik Kapat</button>
+            <button id="stopSpeech">🛑 Hocayı Sustur</button>
+        </div>
+        <!-- Müzik ses kontrolü -->
+    <div id="musicControl">
+        <label for="musicVolume">🎵 Ses Seviyesi:</label>
+        <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="0.5">
+        <span id="volumeValue">50%</span>
+    </div>
+
+    
+        <!-- 🎨 Hoca resmi -->
+        <div id="hoca-header">
+            <img id="hoca-img" src="{{ url_for('static', filename='images/normal_hoca.png') }}" alt="Nasreddin Hoca">
+        </div>
+        <div id="chat-box" class="chat-box"></div>
+
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Sor evladım..." />
+            <button id="send-btn">Gönder</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+        <!-- 🎵 Ses dosyaları -->
+    <audio id="normalMusic" src="{{ url_for('static', filename='images/hoca.mp3') }}" loop></audio>
+    <audio id="kuranMusic" src="{{ url_for('static', filename='images/kitap.mp3') }}" loop></audio>
+</body>
+</html>
